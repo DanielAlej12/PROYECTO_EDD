@@ -1,0 +1,8 @@
+id,name,last_name,gender,age,id_father,is_dead,type_magic,is_owner
+1,Bayek,de Siwa,H,60,0,0,elemental,1
+2,Ezio,Auditore,H,40,1,0,unique,0
+3,Altair,Ibn La Ahad,H,40,1,0,mixed,0
+4,Connor,Kenway,H,30,2,0,mixed,0
+5,Evie,Frye,M,50,2,0,elemental,0
+6,Lucy,Stillman,M,27,3,0,no_magic,0
+7,Desmond,Miles,H,28,3,0,no_magic,0
