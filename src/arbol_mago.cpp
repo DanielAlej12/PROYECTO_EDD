@@ -392,3 +392,48 @@ public:
         cout << "Hechizos de " << mago->name << " " << mago->last_name << ": " << mago->type_magic << endl;
     }
 };
+
+int main() {
+    ArbolMagos arbol;
+    string archivo = "C:/Users/echoe/OneDrive/Desktop/PROYECTO_EDD/bin/magos_data.csv";
+
+    arbol.cargarDesdeCSV(archivo);
+
+    int opcion;
+    do {
+        cout << "\n--- Menu ---\n";
+        cout << "1. Mostrar linea de sucesion actual\n";
+        cout << "2. Asignar nuevo dueno\n";
+        cout << "3. Modificar datos de un mago\n";
+        cout << "4. Mostrar hechizos de un mago\n";
+        cout << "5. Salir\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                arbol.mostrarLineaSucesion();
+                break;
+            case 2:
+                arbol.asignarNuevoDuenio();
+                break;
+            case 3: {
+                int id; cout << "Ingrese ID del mago a modificar: "; cin >> id;
+                arbol.modificarDatos(id);
+                break;
+            }
+            case 4: {
+                int id; cout << "Ingrese ID del mago para mostrar hechizos: "; cin >> id;
+                arbol.mostrarHechizos(id);
+                break;
+            }
+            case 5:
+                cout << "Saliendo..." << endl;
+                break;
+            default:
+                cout << "Opcion invalida." << endl;
+        }
+    } while (opcion != 5);
+
+    return 0;
+}
