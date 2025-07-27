@@ -310,3 +310,15 @@ public:
         }
         file.close();
     }
+
+    // 2. Mostrar la linea de sucesión actual (solo vivos)
+    void mostrarLineaSucesion() {
+        cout << "Linea de sucesion actual:\n";
+        Mago* duenio = buscarDuenio(root);
+
+        if (!duenio) {
+            cout << "No se encontro dueno actual\n";
+            return;
+        }
+        mostrarLineaSucesionSegunReglas(duenio);
+    }
